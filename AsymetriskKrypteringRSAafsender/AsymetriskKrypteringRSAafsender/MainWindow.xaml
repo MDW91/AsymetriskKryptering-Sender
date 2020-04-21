@@ -1,0 +1,35 @@
+﻿<Window x:Class="AsymetriskKrypteringRSAafsender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsymetriskKrypteringRSAafsender"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="291.667" Width="536">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="18,20,0,0" TextWrapping="Wrap" Text="Public Data" VerticalAlignment="Top" Width="104" FontWeight="Bold" TextDecorations="{x:Null}"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="61" Margin="18,34,0,0" VerticalAlignment="Top" Width="500">
+            <Grid Margin="0,0,0,-1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="71*" />
+                    <ColumnDefinition Width="276*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="5,7,0,0" TextWrapping="Wrap" Text="Exponent:" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.562" Width="57" Height="16"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="5,8,0,0" TextWrapping="Wrap" Text="Modulus:" VerticalAlignment="Top" Height="16" Width="56"/>
+                <TextBox Name="Textbox_Exponent" HorizontalAlignment="Left" Height="23" Margin="5,3,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="381" TextChanged="TextBox_Exponent" Grid.Column="1"/>
+                <TextBox TextWrapping="NoWrap" Name="Textbox_Modulus" HorizontalAlignment="Left" Height="23"  VerticalAlignment="Top" Width="381" TextChanged="TextBox_Modulus" Grid.Column="1" Grid.Row="1" Margin="5,4,0,0"/>
+            </Grid>
+        </Border>
+        <TextBox Name="Textbox_Plaintext" HorizontalAlignment="Left" Height="23" Margin="95,109,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="409" Text="Insert Plaintext" TextChanged="CipherBytes_TextChanged"/>
+        <TextBox Name="Textbox_Cipherbytes" HorizontalAlignment="Left" Height="19" Margin="95,162,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="409" TextChanged="TextBox_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,112,0,0" TextWrapping="Wrap" Text="Plaintext:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,163,0,0" TextWrapping="Wrap" Text="Cipherbytes:" VerticalAlignment="Top"/>
+        <Button Name="Button_Encrypt" Content="Encrypt Text" HorizontalAlignment="Left" Margin="95,137,0,0" VerticalAlignment="Top" Width="75" Click="Button_Encrypt_Click"/>
+
+    </Grid>
+</Window>
